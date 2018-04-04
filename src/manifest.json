@@ -1,6 +1,6 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "ABC App",
+  "short_name": "ABC App",
   "start_url": "/",
   "display": "standalone",
   "icons": [{

@@ -1,8 +1,7 @@
 {
-  "name": "@stencil/starter",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "name": "abc-app",
+  "version": "1.0.0",
+  "description": "ABC App",
   "files": [
     "dist/"
   ],
@@ -15,7 +14,7 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "0.7.7",
+    "@stencil/core": "0.7.12",
     "@stencil/router": "latest"
   },
   "devDependencies": {
@@ -24,16 +23,6 @@
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
-  },
-  "author": "Ionic Team",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"

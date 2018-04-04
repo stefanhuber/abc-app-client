@@ -25,31 +25,28 @@ declare global {
 
 import '@stencil/router';
 
-import {
-  MatchResults,
-} from '@stencil/router';
 
 declare global {
-  interface HTMLAppHomeElement extends HTMLStencilElement {
+  interface HTMLAbcAppElement extends HTMLStencilElement {
 
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLAbcAppElement: {
+    prototype: HTMLAbcAppElement;
+    new (): HTMLAbcAppElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'abc-app': HTMLAbcAppElement;
   }
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'abc-app': HTMLAbcAppElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-home': JSXElements.AppHomeAttributes;
+      'abc-app': JSXElements.AbcAppAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface AbcAppAttributes extends HTMLAttributes {
 
     }
   }
@@ -57,53 +54,53 @@ declare global {
 
 
 declare global {
-  interface HTMLAppProfileElement extends HTMLStencilElement {
-    'match': MatchResults;
+  interface HTMLAbcLoginElement extends HTMLStencilElement {
+
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLAbcLoginElement: {
+    prototype: HTMLAbcLoginElement;
+    new (): HTMLAbcLoginElement;
   };
   interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'abc-login': HTMLAbcLoginElement;
   }
   interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'abc-login': HTMLAbcLoginElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
+      'abc-login': JSXElements.AbcLoginAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
+    export interface AbcLoginAttributes extends HTMLAttributes {
+
     }
   }
 }
 
 
 declare global {
-  interface HTMLMyAppElement extends HTMLStencilElement {
+  interface HTMLAbcTestElement extends HTMLStencilElement {
 
   }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
+  var HTMLAbcTestElement: {
+    prototype: HTMLAbcTestElement;
+    new (): HTMLAbcTestElement;
   };
   interface HTMLElementTagNameMap {
-    'my-app': HTMLMyAppElement;
+    'abc-test': HTMLAbcTestElement;
   }
   interface ElementTagNameMap {
-    'my-app': HTMLMyAppElement;
+    'abc-test': HTMLAbcTestElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-app': JSXElements.MyAppAttributes;
+      'abc-test': JSXElements.AbcTestAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
+    export interface AbcTestAttributes extends HTMLAttributes {
 
     }
   }
