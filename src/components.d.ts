@@ -26,6 +26,7 @@ declare global {
 import '@stencil/router';
 
 import {
+  MatchResults,
   RouterHistory,
 } from '@stencil/router';
 
@@ -85,7 +86,7 @@ declare global {
 
 declare global {
   interface HTMLAbcTestElement extends HTMLStencilElement {
-
+    'match': MatchResults;
   }
   var HTMLAbcTestElement: {
     prototype: HTMLAbcTestElement;
@@ -104,7 +105,7 @@ declare global {
   }
   namespace JSXElements {
     export interface AbcTestAttributes extends HTMLAttributes {
-
+      'match'?: MatchResults;
     }
   }
 }
