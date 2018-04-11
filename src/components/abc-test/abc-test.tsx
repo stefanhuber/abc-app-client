@@ -40,7 +40,7 @@ export class ABCTest {
         }
 
         let code = this.match.params.code;
-        fetch('http://localhost/test-app/tests/' + code, {
+        fetch('http://localhost/abc-app/tests/' + code, {
             method : 'PUT' ,
             body : JSON.stringify(test) ,
             headers: {
