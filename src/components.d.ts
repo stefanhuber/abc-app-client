@@ -25,6 +25,9 @@ declare global {
 
 import '@stencil/router';
 
+import {
+  RouterHistory,
+} from '@stencil/router';
 
 declare global {
   interface HTMLAbcAppElement extends HTMLStencilElement {
@@ -55,7 +58,7 @@ declare global {
 
 declare global {
   interface HTMLAbcLoginElement extends HTMLStencilElement {
-
+    'history': RouterHistory;
   }
   var HTMLAbcLoginElement: {
     prototype: HTMLAbcLoginElement;
@@ -74,7 +77,7 @@ declare global {
   }
   namespace JSXElements {
     export interface AbcLoginAttributes extends HTMLAttributes {
-
+      'history'?: RouterHistory;
     }
   }
 }
