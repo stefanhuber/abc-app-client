@@ -25,12 +25,14 @@ export class ABCLogin {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             }
-        }).then((response) => {
-            console.log(response.json());
-
-            // this.history.push('/test/code', {});
+        }).then(response => {
+            if (response.status == 200) {
+                return response.json();
+            }            
+        }).then((json) => {
+            this.history.push('/test/' + json.code, {});
         }).catch((error) => {
-            console.log(error.json());
+            console.log(error);
         });
     }
 
