@@ -14,6 +14,8 @@ export class ABCApp {
         </stencil-route>
         <stencil-route url='/test/:code' component='abc-test'>
         </stencil-route>
+        <stencil-route url='/thanks' component='abc-thanks'>
+        </stencil-route>
       </stencil-router>
     );
   }

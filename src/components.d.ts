@@ -86,6 +86,7 @@ declare global {
 
 declare global {
   interface HTMLAbcTestElement extends HTMLStencilElement {
+    'history': RouterHistory;
     'match': MatchResults;
   }
   var HTMLAbcTestElement: {
@@ -105,7 +106,35 @@ declare global {
   }
   namespace JSXElements {
     export interface AbcTestAttributes extends HTMLAttributes {
+      'history'?: RouterHistory;
       'match'?: MatchResults;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLAbcThanksElement extends HTMLStencilElement {
+
+  }
+  var HTMLAbcThanksElement: {
+    prototype: HTMLAbcThanksElement;
+    new (): HTMLAbcThanksElement;
+  };
+  interface HTMLElementTagNameMap {
+    'abc-thanks': HTMLAbcThanksElement;
+  }
+  interface ElementTagNameMap {
+    'abc-thanks': HTMLAbcThanksElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'abc-thanks': JSXElements.AbcThanksAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AbcThanksAttributes extends HTMLAttributes {
+
     }
   }
 }

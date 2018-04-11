@@ -1,5 +1,5 @@
 import { Component, Prop, State } from '@stencil/core';
-import { MatchResults } from '@stencil/router';
+import { MatchResults, RouterHistory } from '@stencil/router';
 
 @Component({
     tag: 'abc-test' ,
@@ -9,6 +9,9 @@ export class ABCTest {
 
     @Prop()
     match: MatchResults;
+
+    @Prop()
+    history:RouterHistory;
 
     @State()
     test;
@@ -21,6 +24,34 @@ export class ABCTest {
             }).then(json => {
                 this.test = json;
             });
+    }
+
+    finalizeTest(e) {
+        e.preventDefault();
+        let test = {};
+        
+        for (let input of e.target) {
+            if (input.type == "checkbox" && input.checked) {
+                if (!test[input.name]) {
+                    test[input.name] = [];
+                }
+                test[input.name].push(input.value);
+            }
+        }
+
+        let code = this.match.params.code;
+        fetch('http://localhost/test-app/tests/' + code, {
+            method : 'PUT' ,
+            body : JSON.stringify(test) ,
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (response.status == 200) {
+                this.history.push('/thanks', {});
+            }
+        });
     }
 
     render() {
@@ -49,8 +80,10 @@ export class ABCTest {
             return (
                 <div>
                     <h1>Test Execution: { this.test.title }</h1>
-                    <form>
+                    <form onSubmit={ (e) => this.finalizeTest(e) }>
                         { questions }
+
+                        <button type="submit">Finalize Test</button>
                     </form>
                 </div>
             );
